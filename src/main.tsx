@@ -4,10 +4,13 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.tsx";
 
+import theme from "./theme";
+
 createRoot(document.getElementById("root")!).render(
+  /*StrictMode for debugging*/
   <StrictMode>
-    <ChakraProvider>
+    <ChakraProvider theme={theme}>
       <App />
     </ChakraProvider>
-  </StrictMode>
+  </StrictMode>,
 );
