@@ -1,7 +1,9 @@
+import ListingLayout from "./components/ListingPage";
+
 function App() {
   return (
     <>
-      <div>hello</div>
+      <ListingLayout />
     </>
   );
 }
