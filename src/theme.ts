@@ -32,6 +32,13 @@ const theme = extendTheme({
         nft_accent_blue_subtle: '#2aa7c9', // Teal Blue at 10% opacity
         nft_primary_blue_subtle: '#514cff' // Electric Blue at 15% opacity
     },
+    styles: {
+        global: {
+            body: {
+                bg: "nft_black"
+            }
+        }
+    }
 })
 
 export default theme;
