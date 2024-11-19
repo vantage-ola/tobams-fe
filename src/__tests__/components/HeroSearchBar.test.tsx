@@ -45,7 +45,6 @@ describe("HeroSearchBar Component", () => {
 
   test("category dropdown has correct options", () => {
     renderWithChakra(<HeroSearchBar />);
-    const select = screen.getByRole("combobox");
     const options = screen.getAllByRole("option");
 
     const optionValues = options.map((option) => option.getAttribute("value"));
