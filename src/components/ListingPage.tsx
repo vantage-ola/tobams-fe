@@ -11,7 +11,6 @@ import Overline4 from "./Features/Overline4";
 import LatestLiveAuctions from "./Features/LatestAuctions";
 
 import OrbitalBackground from "./Effects/OrbitalBackground";
-import FloatingNFTCards from "./Card/FloatingCard";
 import StaticNFTCards from "./Card/StaticCard";
 const ListingLayout = () => {
   return (
