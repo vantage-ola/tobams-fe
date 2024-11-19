@@ -23,7 +23,7 @@ const FloatingNFTCards: React.FC<FloatingNFTCardsProps> = ({ isStatic }) => {
     // Create random NFT cards
     const newCards = Array.from({ length: 5 }).map((_, i) => ({
       id: i,
-      src: `https://via.placeholder.com/100?text=NFT+${i + 1}`, // Replace with your NFT images
+      src: `assets/hero/hero${i + 1}.png`, // Replace with your NFT images
       price: `${(2.5 + Math.random() * 0.5).toFixed(2)} ETH`, // Random price
       x: Math.random() * window.innerWidth,
       y: Math.random() * window.innerHeight,
@@ -102,10 +102,6 @@ const FloatingNFTCards: React.FC<FloatingNFTCardsProps> = ({ isStatic }) => {
             backgroundPosition="center"
             borderRadius="10px"
             boxShadow="0 0 20px rgba(81, 76, 255, 0.6)" // Glowing effect
-            transition="transform 0.3s"
-            _hover={{
-              transform: "scale(1.1)",
-            }}
           />
           {/* NFT Price */}
           <Text
