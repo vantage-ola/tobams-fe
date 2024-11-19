@@ -9,7 +9,6 @@ import {
   Stack,
   Progress,
 } from "@chakra-ui/react";
-import { TbDetailsOff } from "react-icons/tb";
 
 const Detail = () => {
   return (

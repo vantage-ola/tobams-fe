@@ -1,5 +1,4 @@
 import { extendTheme, type ThemeConfig } from '@chakra-ui/react';
-import '@fontsource/sora';
 
 // colour mode config
 const config: ThemeConfig = {

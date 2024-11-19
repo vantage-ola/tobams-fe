@@ -4,7 +4,7 @@ import DetailsLayout from "./components/DetailsLayout";
 function App() {
   return (
     <>
-      <DetailsLayout />
+      <ListingLayout />
     </>
   );
 }
