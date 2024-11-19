@@ -42,6 +42,7 @@ const Overline = () => {
         <Image
           src="assets/overline/overline.png" // Replace with the actual path to your image
           alt="Hero Graphic"
+          loading="lazy"
         />
       </Box>
     </Box>

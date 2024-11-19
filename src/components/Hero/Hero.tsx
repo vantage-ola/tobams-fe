@@ -76,16 +76,16 @@ const Hero = () => {
         <Flex mt={20} flexWrap="wrap" justify="center" gap={4}>
           <Stack direction={"row"} spacing={10}>
             <Box>
-              <img src={Ritter} />
+              <img src={Ritter} loading="lazy" />
             </Box>
             <Box>
-              <img src={Nike} />
+              <img src={Nike} loading="lazy" />
             </Box>
             <Box>
-              <img src={Adidas} />
+              <img src={Adidas} loading="lazy" />
             </Box>
             <Box>
-              <img src={Holland} />
+              <img src={Holland} loading="lazy" />
             </Box>
           </Stack>
         </Flex>

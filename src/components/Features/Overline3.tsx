@@ -121,6 +121,7 @@ const Overline3 = () => {
                 w="100%"
                 h="100%"
                 objectFit="cover"
+                loading="lazy"
               />
             </Box>
 

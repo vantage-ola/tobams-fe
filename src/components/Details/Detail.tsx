@@ -51,6 +51,7 @@ const Detail = () => {
             alt="NFT Artwork"
             borderRadius="lg"
             boxShadow="lg"
+            loading="lazy"
           />
         </Box>
 

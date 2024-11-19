@@ -92,6 +92,7 @@ const Offers = () => {
                   alt={item.title}
                   borderRadius="md"
                   mb={4}
+                  loading="lazy"
                 />
                 <Text color="nft_white">{item.title}</Text>
                 <Flex justify="space-between" mt={2} color="nft_lightgrey">
@@ -146,7 +147,12 @@ const Offers = () => {
           borderWidth={"1px"}
           borderColor={"nft_darkgrey"}
         >
-          <Image borderRadius="xl" src="assets/offer/offer.png" alt="3D Hand" />
+          <Image
+            borderRadius="xl"
+            src="assets/offer/offer.png"
+            alt="3D Hand"
+            loading="lazy"
+          />
           <Heading size="md" color="nft_white" textAlign="center">
             Get started creating & selling your NFTs
           </Heading>
@@ -195,6 +201,7 @@ const Offers = () => {
                   borderRadius="md"
                   boxSize="50px"
                   mr={4}
+                  loading="lazy"
                 />
                 <Box flex="1">
                   <Text color="nft_white" fontSize="sm" noOfLines={1}>

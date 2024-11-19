@@ -31,6 +31,7 @@ const Overline2 = () => {
               height: "auto",
               objectFit: "contain",
             }}
+            loading="lazy"
           />
         </Box>
       </Box>

@@ -69,6 +69,7 @@ const Overline4 = () => {
             w="full"
             h="auto"
             objectFit="cover"
+            loading="lazy"
           />
         </Box>
         {/* Gallery Section nfts */}
@@ -102,6 +103,7 @@ const Overline4 = () => {
                   objectFit="cover"
                   transition="transform 0.2s"
                   _hover={{ transform: "scale(1.05)" }}
+                  loading="lazy"
                 />
                 <Text fontSize="xs" color="gray.400" textAlign="center">
                   {item.price}

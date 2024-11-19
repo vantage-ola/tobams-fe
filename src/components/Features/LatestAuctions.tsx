@@ -31,7 +31,7 @@ const AuctionCard = ({
       textAlign="center"
       borderWidth="1px"
     >
-      <Image src={image} alt={title} borderRadius="md" mb={4} />
+      <Image loading="lazy" src={image} alt={title} borderRadius="md" mb={4} />
       <Text fontWeight="bold" fontSize="lg" mb={2} color="nft_white">
         {title}
       </Text>
