@@ -8,8 +8,8 @@ import {
   Icon,
   Divider,
 } from "@chakra-ui/react";
-import { AiOutlineHeart } from "react-icons/ai";
 import { BiTimeFive } from "react-icons/bi";
+import { BsHeartFill } from "react-icons/bs";
 
 const AuctionCard = ({
   image,
@@ -68,7 +68,7 @@ const AuctionCard = ({
           ))}
         </AvatarGroup>
         <Flex align="center" gap={2}>
-          <Icon as={AiOutlineHeart} color="nft_red" />
+          <BsHeartFill fill="red" />
           <Text color="nft_lightgrey">{likes}</Text>
         </Flex>
       </Flex>

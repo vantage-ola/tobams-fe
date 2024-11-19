@@ -69,6 +69,7 @@ const Offers = () => {
       <Flex
         justifyContent="space-between"
         flexDirection={{ base: "column", lg: "row" }}
+        gap={{ base: 6, lg: 0 }}
       >
         {/* Left Column */}
         <VStack

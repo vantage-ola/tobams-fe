@@ -31,7 +31,7 @@ const Hero = () => {
         </Text>
         <Heading
           as="h1"
-          fontSize={{ base: "6xl", lg: "8xl" }}
+          fontSize={{ base: "5xl", lg: "8xl" }}
           color="white"
           mb={6}
           textAlign="center"

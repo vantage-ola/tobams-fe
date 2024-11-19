@@ -1,19 +1,24 @@
 import { Box, Text, Heading, Flex, Image } from "@chakra-ui/react";
 import Button from "../Button/Button";
+
 const Overline = () => {
   return (
     <Box
       bg="nft_black"
       color="nft_white"
-      px={{ base: 6, md: 12 }}
-      py={{ base: 10, md: 20 }}
+      px={{ base: 4, md: 12 }}
+      py={{ base: 8, md: 20 }}
       display="flex"
       alignItems="center"
       justifyContent="space-between"
       flexDirection={{ base: "column", md: "row" }}
+      gap={{ base: 8, md: 0 }} // Adds space between elements on smaller screens
     >
       {/* Text Content */}
-      <Box maxW={{ base: "100%", md: "50%" }}>
+      <Box
+        maxW={{ base: "100%", md: "50%" }}
+        textAlign={{ base: "center", md: "left" }}
+      >
         <Text
           fontSize="sm"
           fontWeight="bold"
@@ -24,25 +29,37 @@ const Overline = () => {
         >
           Overline
         </Text>
-        <Heading as="h1" size="2xl" mb={4}>
+        <Heading as="h1" size="xl" mb={4} lineHeight="1.2">
           Sapien ipsum scelerisque convallis fusce
         </Heading>
-        <Text color="nft_lightgrey" fontSize="lg" mb={6}>
+        <Text color="nft_lightgrey" fontSize="md" mb={6}>
           Ut amet vulputate faucibus vitae semper eget auctor. Diam tempor
           pulvinar ultricies dolor feugiat aliquam commodo.
         </Text>
-        <Flex gap={4}>
-          <Button>Get started</Button>
-          <Button variant="outline">Learn more</Button>
+        <Flex
+          gap={4}
+          justifyContent={{ base: "center", md: "flex-start" }} // Center buttons on mobile
+          flexDirection={{ base: "column", sm: "row" }} // Stack buttons vertically on smaller screens
+        >
+          <Button w={{ base: "100%", sm: "auto" }}>Get started</Button>
+          <Button variant="outline" w={{ base: "100%", sm: "auto" }}>
+            Learn more
+          </Button>
         </Flex>
       </Box>
 
       {/* Image Section */}
-      <Box maxW={{ base: "100%", md: "40%" }} mt={{ base: 10, md: 0 }}>
+      <Box
+        maxW={{ base: "100%", md: "40%" }}
+        mt={{ base: 8, md: 0 }}
+        display="flex"
+        justifyContent="center" // Center image on mobile
+      >
         <Image
-          src="assets/overline/overline.png" // Replace with the actual path to your image
+          src="assets/overline/overline.png"
           alt="Hero Graphic"
           loading="lazy"
+          boxSize={{ base: "80%", sm: "100%" }} // Scales image better for small screens
         />
       </Box>
     </Box>

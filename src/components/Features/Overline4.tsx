@@ -1,4 +1,15 @@
-import { Box, Flex, Stack, Text, Icon, Image, Divider } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Stack,
+  Text,
+  Icon,
+  Image,
+  Divider,
+  VStack,
+  Wrap,
+  WrapItem,
+} from "@chakra-ui/react";
 import {
   FaUser,
   FaPaintBrush,
@@ -37,31 +48,51 @@ const Overline4 = () => {
 
   return (
     <Box>
-      <Divider width="80%" mx="auto" my={8} />
-      <Box color="white" py={12} px={4}>
+      <Divider
+        width={{ base: "95%", md: "80%" }}
+        mx="auto"
+        my={{ base: 4, md: 8 }}
+        borderColor="gray.700"
+      />
+      <Box color="white" py={{ base: 6, md: 12 }} px={{ base: 2, md: 4 }}>
         {/* Stats Section */}
-        <Flex justify="center" gap={16} mb={20} flexWrap="wrap">
+        <Wrap
+          justify="center"
+          spacing={{ base: 4, md: 16 }}
+          mb={{ base: 10, md: 20 }}
+        >
           {stats.map((stat, index) => (
-            <Stack key={index} align="center" spacing={2}>
-              <Icon as={stat.icon} boxSize={6} color="nft_white" />
-              <Text fontSize="3xl" fontWeight="bold">
-                {stat.value}
-              </Text>
-              <Text fontSize="sm" color="nft_darkgrey">
-                {stat.label}
-              </Text>
-            </Stack>
+            <WrapItem key={index}>
+              <VStack
+                align="center"
+                spacing={{ base: 1, md: 2 }}
+                textAlign="center"
+              >
+                <Icon
+                  as={stat.icon}
+                  boxSize={{ base: 5, md: 6 }}
+                  color="nft_white"
+                />
+                <Text fontSize={{ base: "2xl", md: "3xl" }} fontWeight="bold">
+                  {stat.value}
+                </Text>
+                <Text fontSize={{ base: "xs", md: "sm" }} color="nft_darkgrey">
+                  {stat.label}
+                </Text>
+              </VStack>
+            </WrapItem>
           ))}
-        </Flex>
+        </Wrap>
 
         {/* Call-to-Action Card */}
         <Box
           position="relative"
-          maxW="1200px"
+          maxW={{ base: "100%", md: "1200px" }}
           mx="auto"
-          mb={16}
+          mb={{ base: 8, md: 16 }}
           borderRadius="2xl"
           overflow="hidden"
+          px={{ base: 2, md: 0 }}
         >
           <Image
             src={"/assets/overline/overline_section.png"}
@@ -72,10 +103,11 @@ const Overline4 = () => {
             loading="lazy"
           />
         </Box>
+
         {/* Gallery Section nfts */}
-        <Box overflow="hidden" px={4}>
+        <Box overflow="hidden" px={{ base: 1, md: 4 }}>
           <Flex
-            gap={4}
+            gap={{ base: 2, md: 4 }}
             overflowX="auto"
             pb={6}
             sx={{
@@ -93,19 +125,30 @@ const Overline4 = () => {
             }}
           >
             {galleryItems.map((item, index) => (
-              <Stack key={index} spacing={1} flex="0 0 auto" align="center">
+              <Stack
+                key={index}
+                spacing={1}
+                flex="0 0 auto"
+                align="center"
+                w={{ base: "50px", md: "60px" }}
+              >
                 <Image
                   src={item.image}
                   alt={`NFT ${index + 1}`}
-                  w="60px"
-                  h="60px"
+                  w={{ base: "50px", md: "60px" }}
+                  h={{ base: "50px", md: "60px" }}
                   borderRadius="xl"
                   objectFit="cover"
                   transition="transform 0.2s"
                   _hover={{ transform: "scale(1.05)" }}
                   loading="lazy"
                 />
-                <Text fontSize="xs" color="gray.400" textAlign="center">
+                <Text
+                  fontSize={{ base: "2xs", md: "xs" }}
+                  color="gray.400"
+                  textAlign="center"
+                  isTruncated
+                >
                   {item.price}
                 </Text>
               </Stack>
