@@ -5,10 +5,29 @@ import {
   Text,
   Heading,
   Avatar,
-  Button,
   Stack,
-  Progress,
 } from "@chakra-ui/react";
+import { FaRegClock } from "react-icons/fa";
+import Button from "../Button/Button";
+import {
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  ResponsiveContainer,
+} from "recharts";
+
+// Sample bid history data
+const bidHistoryData = [
+  { time: "12:00", bid: 1.5 },
+  { time: "12:30", bid: 2.2 },
+  { time: "13:00", bid: 3.0 },
+  { time: "13:30", bid: 4.0 },
+  { time: "14:00", bid: 5.0 },
+  { time: "14:30", bid: 5.25 },
+];
 
 const Detail = () => {
   return (
@@ -17,11 +36,11 @@ const Detail = () => {
       color="nft_white"
       p={8}
       borderRadius="lg"
-      boxShadow="xl"
+      boxShadow="2xl"
     >
       <Flex
-        direction={{ base: "column", md: "row" }}
-        align="center"
+        direction={{ base: "column", lg: "row" }}
+        align="start"
         justify="space-between"
         gap={6}
       >
@@ -68,10 +87,16 @@ const Detail = () => {
               </Flex>
             </Flex>
 
-            {/* Price and Bid Info */}
-            <Flex align="center" justify="space-between">
+            {/* Price and Time Left */}
+            <Flex
+              align="center"
+              justify="space-between"
+              bg="nft_dark"
+              p={4}
+              borderRadius="md"
+            >
               <Box>
-                <Text fontSize="xl" fontWeight="bold">
+                <Text fontSize="2xl" fontWeight="bold">
                   5.25 ETH
                 </Text>
                 <Text fontSize="sm" color="nft_lightgrey">
@@ -79,37 +104,48 @@ const Detail = () => {
                 </Text>
               </Box>
               <Box>
-                <Text fontSize="xl" fontWeight="bold">
-                  22:59 min
+                <Text fontSize="2xl" fontWeight="bold">
+                  <FaRegClock /> 22:59 min
                 </Text>
                 <Text fontSize="sm" color="nft_lightgrey">
-                  Time left
+                  Ends 01.01.2022
                 </Text>
               </Box>
             </Flex>
 
             {/* Place a Bid Button */}
-            <Button
-              size="lg"
-              bg="nft_darkblue"
-              _hover={{ bg: "nft_lightblue" }}
-              color="nft_white"
-              width="100%"
-            >
-              Place a bid
-            </Button>
+            <Button>Place a bid</Button>
 
-            {/* Bid History */}
+            {/* History of Bids */}
             <Box>
               <Text fontSize="sm" color="nft_lightgrey" mb={2}>
                 History of bids (12 people are bidding)
               </Text>
-              <Progress
-                value={65}
-                size="sm"
-                colorScheme="blue"
-                bg="nft_darkgrey"
-              />
+              <Box bg="nft_dark" borderRadius="md" p={4}>
+                <ResponsiveContainer width="100%" height={150}>
+                  <LineChart data={bidHistoryData}>
+                    <CartesianGrid stroke="#2a2a2a" strokeDasharray="3 3" />
+                    <XAxis dataKey="time" stroke="#888888" />
+                    <YAxis stroke="#888888" />
+                    <Tooltip
+                      contentStyle={{
+                        backgroundColor: "#2a2a2a",
+                        borderColor: "#888888",
+                        color: "#ffffff",
+                      }}
+                      cursor={{ stroke: "#888888", strokeWidth: 1 }}
+                    />
+                    <Line
+                      type="monotone"
+                      dataKey="bid"
+                      stroke="#4f9efc"
+                      strokeWidth={2}
+                      dot={{ fill: "#4f9efc", r: 4 }}
+                      activeDot={{ r: 6 }}
+                    />
+                  </LineChart>
+                </ResponsiveContainer>
+              </Box>
             </Box>
           </Stack>
         </Box>
