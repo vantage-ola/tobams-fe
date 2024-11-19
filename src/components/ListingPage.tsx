@@ -12,6 +12,7 @@ import LatestLiveAuctions from "./Features/LatestAuctions";
 
 import OrbitalBackground from "./Effects/OrbitalBackground";
 import FloatingNFTCards from "./Card/FloatingCard";
+import StaticNFTCards from "./Card/StaticCard";
 const ListingLayout = () => {
   return (
     <>
@@ -25,7 +26,7 @@ const ListingLayout = () => {
           zIndex={-1}
         >
           <OrbitalBackground />
-          <FloatingNFTCards isStatic={false} />
+          <StaticNFTCards />
         </Box>
         <Navbar />
         <Hero />
