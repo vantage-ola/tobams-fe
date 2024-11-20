@@ -10,6 +10,12 @@ This project is a frontend application built with React, TypeScript, and Chakra 
 - **Responsive Design** out of the box.
 - **Easy Setup** and quick start.
 
+## Deployment Link
+
+[Listing Page](https://tobams-ola-submission.vercel.app)
+
+[Details Page](https://tobams-ola-submission.vercel.app/details)
+
 ## 📦 Installation
 
 ### Prerequisites
