@@ -2,7 +2,7 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { ChakraProvider } from "@chakra-ui/react";
-import HeroSearchBar from "../../components/Button/HeroSearchBar"; // Adjust import path as needed
+import HeroSearchBar from "../../../components/Button/HeroSearchBar"; // Adjust import path as needed
 
 // Wrapper to provide Chakra context
 const renderWithChakra = (ui: React.ReactElement) => {

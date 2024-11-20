@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Box, Text } from "@chakra-ui/react";
-
+// not in use,
 interface NFTCard {
   id: number;
   src: string;

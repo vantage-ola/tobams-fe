@@ -11,6 +11,16 @@ import {
 import { BiTimeFive } from "react-icons/bi";
 import { BsHeartFill } from "react-icons/bs";
 
+type AuctionItem = {
+  image: string;
+  title: string;
+  ethPrice: string;
+  timeLeft: string;
+  avatars: string[];
+  bids: number;
+  likes: number;
+};
+
 const AuctionCard = ({
   image,
   title,
@@ -19,7 +29,7 @@ const AuctionCard = ({
   avatars,
   bids,
   likes,
-}: any) => {
+}: AuctionItem) => {
   return (
     <Box
       bg="nft_black"
@@ -77,7 +87,7 @@ const AuctionCard = ({
 };
 
 const LatestLiveAuctions = () => {
-  const auctionItems = [
+  const auctionItems: AuctionItem[] = [
     {
       image: "assets/live_auctions/Auctions.png",
       title: "Vulputate felis purus viverra morbi facilisi eget",
