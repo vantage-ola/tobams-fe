@@ -16,6 +16,10 @@ This project is a frontend application built with React, TypeScript, and Chakra 
 
 [Details Page](https://tobams-ola-submission.vercel.app/details)
 
+## Tests
+
+Couldnt complete testing the whole component because of the time constraint... As of now, there are 30 tests and 6 test suites.
+
 ## 📦 Installation
 
 ### Prerequisites
