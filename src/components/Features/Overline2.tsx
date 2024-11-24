@@ -71,12 +71,7 @@ const Overline2 = () => {
           flexWrap="wrap"
           gap={4}
         >
-          <Stack
-            direction="column"
-            align="center"
-            spacing={2}
-            flex={{ base: "1 0 100%", md: "1" }}
-          >
+          <Stack direction="column" align="center" spacing={2}>
             <Icon as={FaBook} boxSize={8} color="nft_darkblue" />
             <Text fontWeight="bold" color="nft_white">
               Sollicitudin sapien
